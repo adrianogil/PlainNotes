@@ -12,5 +12,6 @@
   "translate_tabs_to_spaces": true,
   "tab_completion": true,
   "trim_trailing_white_space_on_save": false,
-  "trim_automatic_white_space": false
+  "trim_automatic_white_space": false,
+  "daily_notes_directory": "/Notes/Reports",
 }
