@@ -722,7 +722,7 @@ contexts:
         2: markup.underline.link.markdown
         4: punctuation.definition.link.markdown
   link-inet:
-    - match: '(<)?(\b(?:https?|ftp|file|git):///?[^\s()<>\[\]]+)(>)?'
+    - match: '(<)?(\b(?:https?|ftp|file|note|git):///?[^\s()<>\[\]]+)(>)?'
       scope: meta.link.inet.markdown
       captures:
         1: punctuation.definition.link.markdown
