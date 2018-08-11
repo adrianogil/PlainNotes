@@ -10,4 +10,5 @@
   { "caption": "Notes: Change Color…" ,         "command": "note_change_color" },
   { "caption": "Notes: Unarchive…"    ,         "command": "note_unarchive"    },
   { "caption": "Notes: Create/Open Daily Note", "command": "create_daily_note"    },
+  { "caption": "Notes: Create a NoteLink", "command": "create_note_link"    },
 ]

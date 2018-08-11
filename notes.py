@@ -333,6 +333,25 @@ class NoteRemoveCommand(sublime_plugin.WindowCommand):
         else:
             return False
 
+class CreateNoteLink(sublime_plugin.TextCommand):
+    def run(self, edit, **kwargs):
+        filename =  self.view.file_name()
+
+        if filename is not None:
+            size_home = len(os.environ['HOME'])
+            note_url = filename[size_home:-5].replace(' ', '%20')
+            note_url = "note://" + note_url[6:]
+            print("create_note_link - filename: " + note_url)
+
+            sublime.set_clipboard(note_url)
+
+            note_title = os.path.basename(filename)
+            note_title = note_title[:-5]
+
+            markdown_note_url = "_" + note_title + ': ' + note_url
+
+            sublime.set_clipboard(markdown_note_url)
+
 
 class NoteRenameCommand(sublime_plugin.WindowCommand):
 
