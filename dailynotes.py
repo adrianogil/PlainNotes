@@ -8,7 +8,7 @@ class CreateDailyNoteCommand(sublime_plugin.TextCommand):
     def run(self, edit):
 
         note_title = datetime.datetime.now().strftime("%Y.%m.%d") + '.note'
-        daily_path = "/Notes/Reports/"
+        daily_path = "/Notes/Personal/Reports/"
         note_path = os.environ['HOME'] + daily_path + note_title
 
         if not os.path.isfile(note_path):
