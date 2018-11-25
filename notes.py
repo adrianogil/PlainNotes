@@ -342,11 +342,9 @@ class CreateNoteLink(sublime_plugin.TextCommand):
             note_url = filename[size_home:-5].replace(' ', '%20')
             note_url = "note://" + note_url[6:]
             print("create_note_link - filename: " + note_url)
-
-            sublime.set_clipboard(note_url)
-
             note_title = os.path.basename(filename)
             note_title = note_title[:-5]
+            note_title = note_title.replace("_", " ")
 
             markdown_note_url = "_" + note_title + ': ' + note_url
 
